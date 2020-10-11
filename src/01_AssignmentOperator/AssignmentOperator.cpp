@@ -9,7 +9,12 @@
 
 CMyString::CMyString(char *pData) {
     if (pData != nullptr) {
-        m_pData = (char *) std::malloc(sizeof(pData) + 1);
+//        printf("%d,%d", sizeof(pData),strlen(pData));
+//        m_pData = (char *) std::malloc(sizeof(pData) + 1);
+//        strcpy(m_pData, pData);
+//        printf("%d,%d", sizeof(m_pData),strlen(m_pData));
+        int length = strlen(pData);
+        m_pData = new char[length + 1];
         strcpy(m_pData, pData);
     } else {
         m_pData = new char[1];
@@ -18,7 +23,10 @@ CMyString::CMyString(char *pData) {
 }
 
 CMyString::CMyString(const CMyString &str) {
-    m_pData = (char *) std::malloc(sizeof(str.m_pData) + 1);
+//    m_pData = (char *) std::malloc(sizeof(str.m_pData) + 1);
+//    strcpy(m_pData, str.m_pData);
+    int len = strlen(str.m_pData);
+    m_pData = new char[len+1];
     strcpy(m_pData, str.m_pData);
 }
 
