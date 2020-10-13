@@ -9,4 +9,4 @@ file(GLOB SOURCES
         )
 
 add_executable(codingInterviews main.cpp ${SOURCE_FILES} ${SOURCES})
-add_executable(05_replaceSpace src/05_replaceSpace_leetcode/replaceSpace.cpp src/06_reversePrint_leetcode/reversePrint.cpp)
+add_executable(05_replaceSpace src/05_replaceSpace_leetcode/replaceSpace.cpp)
