@@ -13,3 +13,4 @@ add_executable(05_replaceSpace src/codingInterviews/05_replaceSpace/replaceSpace
 add_executable(09_CQueue src/codingInterviews/09_CQueue/CQueue.cpp)
 add_executable(10_1_fib src/codingInterviews/10_1_fib/fib.cpp)
 add_executable(20201014_swapPairs src/codingEveryday/20201013_swapPairs/swapPairs.cpp)
+add_executable(10_2_numWays src/codingInterviews/10_2_numWays/numWays.cpp)
