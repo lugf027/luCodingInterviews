@@ -4,11 +4,12 @@ project(codingInterviews)
 set(CMAKE_CXX_STANDARD 11)
 
 file(GLOB SOURCES
-        src/*/*.h
-        src/*/*.cpp
+        src/*/*/*.h
+        src/*/*/*.cpp
         )
 
 add_executable(codingInterviews main.cpp ${SOURCE_FILES} ${SOURCES})
-add_executable(05_replaceSpace src/05_replaceSpace_leetcode/replaceSpace.cpp)
-add_executable(09_CQueue src/09_CQueue_leetcode/CQueue.cpp)
-add_executable(10_1_fib src/10_1_fib_leetcode/fib.cpp)
+add_executable(05_replaceSpace src/codingInterviews/05_replaceSpace/replaceSpace.cpp src/codingEveryday/20201013_swapPairs/swapPairs.cpp)
+add_executable(09_CQueue src/codingInterviews/09_CQueue/CQueue.cpp)
+add_executable(10_1_fib src/codingInterviews/10_1_fib/fib.cpp)
+add_executable(20201014_swapPairs src/codingEveryday/20201013_swapPairs/swapPairs.cpp)
