@@ -12,5 +12,5 @@
 | 2020-10-13 | [07 重建二叉树](https://leetcode-cn.com/problems/zhong-jian-er-cha-shu-lcof) | [buildTree.cpp](https://github.com/lugf027/luCodingInterviews/blob/master/src/codingInterviews/07_buildTree/buildTree.cpp) |
 | 2020-10-13 | [09 用两个栈实现队列](https://leetcode-cn.com/problems/yong-liang-ge-zhan-shi-xian-dui-lie-lcof) | [CQueue.cpp](https://github.com/lugf027/luCodingInterviews/blob/master/src/codingInterviews/09_CQueue/CQueue.cpp) |
 | 2020-10-13 | [10-1 斐波那契数列](https://leetcode-cn.com/problems/fei-bo-na-qi-shu-lie-lcof) | [fib.cpp](https://github.com/lugf027/luCodingInterviews/blob/master/src/codingInterviews/10_1_fib/fib.cpp) |
-| 2020-10-14 | [10-2 青蛙跳台阶问题](https://leetcode-cn.com/problems/qing-wa-tiao-tai-jie-wen-ti-lcof) |                                                              |
-
+| 2020-10-14 | [10-2 青蛙跳台阶问题](https://leetcode-cn.com/problems/qing-wa-tiao-tai-jie-wen-ti-lcof) | [numWays.cpp](https://github.com/lugf027/luCodingInterviews/blob/master/src/codingInterviews/10_2_numWays/numWays.cpp) |
+| 2020-10-14 | [11. 旋转数组的最小数字](https://leetcode-cn.com/problems/xuan-zhuan-shu-zu-de-zui-xiao-shu-zi-lcof/) |                                                              |
