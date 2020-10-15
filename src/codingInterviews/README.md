@@ -15,5 +15,6 @@
 | 2020-10-14 | [10-2 青蛙跳台阶问题](https://leetcode-cn.com/problems/qing-wa-tiao-tai-jie-wen-ti-lcof) | [numWays.cpp](https://github.com/lugf027/luCodingInterviews/blob/master/src/codingInterviews/10_2_numWays/numWays.cpp) |      |
 | 2020-10-14 | [11. 旋转数组的最小数字](https://leetcode-cn.com/problems/xuan-zhuan-shu-zu-de-zui-xiao-shu-zi-lcof/) | [minArray.cpp](https://github.com/lugf027/luCodingInterviews/blob/master/src/codingInterviews/11_minArray/minArray.cpp) |      |
 | 2020-10-14 | [12. 矩阵中的路径](https://leetcode-cn.com/problems/ju-zhen-zhong-de-lu-jing-lcof/) | [exist.cpp](https://github.com/lugf027/luCodingInterviews/blob/master/src/codingInterviews/12_exist/exist.cpp) | 中等 |
-| 2020-10-14 | [13. 机器人的运动范围](https://leetcode-cn.com/problems/ji-qi-ren-de-yun-dong-fan-wei-lcof/) |                                                              | 中等 |
+| 2020-10-14 | [13. 机器人的运动范围](https://leetcode-cn.com/problems/ji-qi-ren-de-yun-dong-fan-wei-lcof/) | [movingCount.cpp](https://github.com/lugf027/luCodingInterviews/blob/master/src/codingInterviews/13_movingCount/movingCount.cpp) | 中等 |
+| 2020-10-15 | [14- I. 剪绳子](https://leetcode-cn.com/problems/jian-sheng-zi-lcof/) |                                                              | 中等 |
 
