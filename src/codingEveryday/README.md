@@ -6,5 +6,6 @@
 | :--------: | :----------------------------------------------------------: | :----------------------------------------------------------: | ---- |
 | 2020-10-13 | [24. 两两交换链表中的节点](https://leetcode-cn.com/problems/swap-nodes-in-pairs/) | [swapPairs.cpp](https://github.com/lugf027/luCodingInterviews/blob/master/src/codingEveryday/20201013_swapPairs/swapPairs.cpp) | 中等 |
 | 2020-10-14 | [1002. 查找常用字符](https://leetcode-cn.com/problems/find-common-characters/) | [commonChars.cpp](https://github.com/lugf027/luCodingInterviews/blob/master/src/codingEveryday/20201014_commonChars/commonChars.cpp) |      |
-| 2020-10-15 | [116. 填充每个节点的下一个右侧节点指针](https://leetcode-cn.com/problems/populating-next-right-pointers-in-each-node/) |                                                              | 中等 |
+| 2020-10-15 | [116. 填充每个节点的下一个右侧节点指针](https://leetcode-cn.com/problems/populating-next-right-pointers-in-each-node/) | [connect.cpp](https://github.com/lugf027/luCodingInterviews/blob/master/src/codingEveryday/20201015_connect/connect.cpp) | 中等 |
+| 2020-10-16 | [977. 有序数组的平方](https://leetcode-cn.com/problems/squares-of-a-sorted-array/) |                                                              |      |
 

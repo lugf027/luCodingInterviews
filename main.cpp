@@ -1,4 +1,4 @@
-#include "./src/codingInterviews//01_AssignmentOperator/AssignmentOperator.h"
+#include "./src/codingInterviews/01_AssignmentOperator/AssignmentOperator.h"
 
 int main() {
     /// test ./src/01_AssignmentOperator/AssignmentOperator.h
