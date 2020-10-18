@@ -17,5 +17,6 @@
 | 2020-10-14 | [12. 矩阵中的路径](https://leetcode-cn.com/problems/ju-zhen-zhong-de-lu-jing-lcof/) | [exist.cpp](https://github.com/lugf027/luCodingInterviews/blob/master/src/codingInterviews/12_exist/exist.cpp) | 中等 |
 | 2020-10-14 | [13. 机器人的运动范围](https://leetcode-cn.com/problems/ji-qi-ren-de-yun-dong-fan-wei-lcof/) | [movingCount.cpp](https://github.com/lugf027/luCodingInterviews/blob/master/src/codingInterviews/13_movingCount/movingCount.cpp) | 中等 |
 | 2020-10-15 | [14- I. 剪绳子](https://leetcode-cn.com/problems/jian-sheng-zi-lcof/) | [cuttingRope.cpp](https://github.com/lugf027/luCodingInterviews/blob/master/src/codingInterviews/14_1_cuttingRope/cuttingRope.cpp) | 中等 |
-| 2020-10-18 | [14- II. 剪绳子 II](https://leetcode-cn.com/problems/jian-sheng-zi-ii-lcof/) |                                                              | 中等 |
+| 2020-10-18 | [14- II. 剪绳子 II](https://leetcode-cn.com/problems/jian-sheng-zi-ii-lcof/) | [cuttingRope.cpp](https://github.com/lugf027/luCodingInterviews/blob/master/src/codingInterviews/14_2_cuttingRope/cuttingRope.cpp) | 中等 |
+| 2020-10-19 | [15. 二进制中1的个数](https://leetcode-cn.com/problems/er-jin-zhi-zhong-1de-ge-shu-lcof/) |                                                              |      |
 
