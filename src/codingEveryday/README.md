@@ -9,5 +9,6 @@
 | 2020-10-15 | [116. 填充每个节点的下一个右侧节点指针](https://leetcode-cn.com/problems/populating-next-right-pointers-in-each-node/) | [connect.cpp](https://github.com/lugf027/luCodingInterviews/blob/master/src/codingEveryday/20201015_connect/connect.cpp) | 中等 |
 | 2020-10-16 | [977. 有序数组的平方](https://leetcode-cn.com/problems/squares-of-a-sorted-array/) | [sortedSquares.cpp](https://github.com/lugf027/luCodingInterviews/blob/master/src/codingEveryday/20201016_sortedSquares/sortedSquares.cpp) |      |
 | 2020-10-17 | [52. N皇后 II](https://leetcode-cn.com/problems/n-queens-ii/) | [51.solveNQueens.cpp](https://github.com/lugf027/luCodingInterviews/blob/master/src/codingEveryday/20201016_totalNQueens/solveNQueens.cpp) [52.totalQueens.cpp](https://github.com/lugf027/luCodingInterviews/blob/master/src/codingEveryday/20201016_totalNQueens/totalQueens.cpp) | 困难 |
-| 2020-10-18 | [19. 删除链表的倒数第N个节点](https://leetcode-cn.com/problems/remove-nth-node-from-end-of-list/) |                                                              | 中等 |
+| 2020-10-18 | [19. 删除链表的倒数第N个节点](https://leetcode-cn.com/problems/remove-nth-node-from-end-of-list/) | [removeNthFromEnd.cpp](https://github.com/lugf027/luCodingInterviews/blob/master/src/codingEveryday/20201018_removeNthFromEnd/removeNthFromEnd.cpp) | 中等 |
+| 2020-10-19 | [844. 比较含退格的字符串](https://leetcode-cn.com/problems/backspace-string-compare/) |                                                              |      |
 
