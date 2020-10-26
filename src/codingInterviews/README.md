@@ -21,5 +21,6 @@
 | 2020-10-18 | [15. 二进制中1的个数](https://leetcode-cn.com/problems/er-jin-zhi-zhong-1de-ge-shu-lcof/) | [hammingWeight.cpp](https://github.com/lugf027/luCodingInterviews/blob/master/src/codingInterviews/15_hammingWeight/hammingWeight.cpp) |      |
 | 2020-10-18 | [16. 数值的整数次方](https://leetcode-cn.com/problems/shu-zhi-de-zheng-shu-ci-fang-lcof/) | [myPow.cpp](https://github.com/lugf027/luCodingInterviews/blob/master/src/codingInterviews/16_myPow/myPow.cpp) | 中等 |
 | 2020-10-18 | [17. 打印从1到最大的n位数](https://leetcode-cn.com/problems/da-yin-cong-1dao-zui-da-de-nwei-shu-lcof/) | [printNumbers.cpp](https://github.com/lugf027/luCodingInterviews/blob/master/src/codingInterviews/17_printNumbers/printNumbers.cpp) |      |
-| 2020-10-18 | [18. 删除链表的节点](https://leetcode-cn.com/problems/shan-chu-lian-biao-de-jie-dian-lcof/) |                                                              |      |
+| 2020-10-18 | [18. 删除链表的节点](https://leetcode-cn.com/problems/shan-chu-lian-biao-de-jie-dian-lcof/) | [deleteNode.cpp](https://github.com/lugf027/luCodingInterviews/blob/master/src/codingInterviews/18_deleteNode/deleteNode.cpp) |      |
+| 2020-10-26 | [19. 正则表达式匹配](https://leetcode-cn.com/problems/zheng-ze-biao-da-shi-pi-pei-lcof/) |                                                              | 困难 |
 
