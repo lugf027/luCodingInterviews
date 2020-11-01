@@ -17,7 +17,8 @@
 | 2020-10-29 | [129. 求根到叶子节点数字之和](https://leetcode-cn.com/problems/sum-root-to-leaf-numbers/) | [sumNumbers.cpp](https://github.com/lugf027/luCodingInterviews/blob/master/src/codingEveryday/20201029_sumNumbers/sumNumbers.cpp) |    中等    |
 | 2020-10-30 | [463. 岛屿的周长](https://leetcode-cn.com/problems/island-perimeter/) | [islandPerimeter.cpp](https://github.com/lugf027/luCodingInterviews/blob/master/src/codingEveryday/20201030_islandPerimeter/islandPerimeter.cpp) |            |
 | 2020-10-31 | [381. O(1) 时间插入、删除和获取随机元素 - 允许重复](https://leetcode-cn.com/problems/insert-delete-getrandom-o1-duplicates-allowed/) | [RandomizedCollection.cpp](https://github.com/lugf027/luCodingInterviews/blob/master/src/codingEveryday/20201031_RandomizedCollection/RandomizedCollection.cpp) |    困难    |
-| 2020-11-01 |                                                              |                                                              | 困难<br>WR |
+| 2020-11-01 | [140. 单词拆分 II](https://leetcode-cn.com/problems/word-break-ii/) | [wordBreak139.cpp](https://github.com/lugf027/luCodingInterviews/blob/master/src/codingEveryday/20201101_wordBreak139/wordBreak139.cpp)<br>[wordBreak140.cpp](https://github.com/lugf027/luCodingInterviews/blob/master/src/codingEveryday/20201101_wordBreak140/wordBreak140.cpp) | 困难<br>WR |
+| 2020-11-02 | [349. 两个数组的交集](https://leetcode-cn.com/problems/intersection-of-two-arrays/) |                                                              |            |
 
 WR: Wait Review
 
