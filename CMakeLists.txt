@@ -17,3 +17,5 @@ add_executable(10_1_fib src/codingInterviews/10_1_fib/fib.cpp)
 add_executable(20201014_swapPairs src/codingEveryday/20201013_swapPairs/swapPairs.cpp)
 add_executable(10_2_numWays src/codingInterviews/10_2_numWays/numWays.cpp)
 #add_executable(17_printNumber src/codingInterviews/17_printNumbers/printNumbers.cpp)
+
+add_executable(20201106_sortByBits src/codingEveryday/20201106_sortByBits/sortByBits.cpp)
