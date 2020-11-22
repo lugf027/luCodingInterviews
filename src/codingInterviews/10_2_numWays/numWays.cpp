@@ -12,34 +12,38 @@
 
 #include <cstdlib>
 
-class Solution {
-public:
-    /**
-     * 动态规划
-     * @param n
-     * @return
-     */
-    int numWays(int n) {
-        if (n == 0 || n == 1) {
-            return 1;
+namespace numWays{
+    class Solution {
+    public:
+        /**
+         * 动态规划
+         * @param n
+         * @return
+         */
+        int numWays(int n) {
+            if (n == 0 || n == 1) {
+                return 1;
+            }
+
+            int *nums = (int *) malloc((n + 1) * sizeof(int));
+            nums[0] = 1;
+            nums[1] = 1;
+
+            for (int i = 2; i <= n; ++i) {
+                nums[i] = (nums[i - 1] + nums[i - 2]) % 1000000007;
+            }
+
+            return nums[n];
         }
+    };
 
-        int *nums = (int *) malloc((n + 1) * sizeof(int));
-        nums[0] = 1;
-        nums[1] = 1;
+//    int main(){
+//        Solution solution;
+//        int a = solution.numWays(2);
+//
+//
+//        return 0;
+//    }
 
-        for (int i = 2; i <= n; ++i) {
-            nums[i] = (nums[i - 1] + nums[i - 2]) % 1000000007;
-        }
-
-        return nums[n];
-    }
-};
-
-int main(){
-    Solution solution;
-    int a = solution.numWays(2);
-
-
-    return 0;
 }
+

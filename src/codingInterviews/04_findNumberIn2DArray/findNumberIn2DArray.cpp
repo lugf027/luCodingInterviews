@@ -27,37 +27,42 @@ using namespace std;
         0 <= m <= 1000
  */
 
-class Solution {
-public:
+namespace findNumberIn2DArray {
 
-    /**
-     * 暴力查找略
-     */
+    class Solution {
+    public:
 
-    /**
-     * 线性查找、二叉搜索树
-     * @param matrix
-     * @param target
-     * @return
-     */
-    bool findNumberIn2DArray(vector<vector<int>>& matrix, int target) {
-        // 自己第一次忽略了外层为 零 的情况。
-        if(matrix.empty()){
+        /**
+         * 暴力查找略
+         */
+
+        /**
+         * 线性查找、二叉搜索树
+         * @param matrix
+         * @param target
+         * @return
+         */
+        bool findNumberIn2DArray(vector<vector<int>> &matrix, int target) {
+            // 自己第一次忽略了外层为 零 的情况。
+            if (matrix.empty()) {
+                return false;
+            }
+
+            int row = 0;
+            int column = matrix.at(0).size() - 1;
+            while (row < matrix.size() && column >= 0) {
+                if (matrix.at(row).at(column) > target) {
+                    --column;
+                }
+                else if (matrix.at(row).at(column) < target) {
+                    ++row;
+                }
+                else {
+                    return true;
+                }
+            }
+
             return false;
         }
-
-        int row = 0;
-        int column = matrix.at(0).size() -1;
-        while(row < matrix.size() && column >= 0){
-            if(matrix.at(row).at(column) > target){
-                --column;
-            }else if(matrix.at(row).at(column) < target){
-                ++row;
-            }else{
-                return true;
-            }
-        }
-
-        return false;
-    }
-};
+    };
+}

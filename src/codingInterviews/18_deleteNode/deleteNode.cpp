@@ -6,33 +6,36 @@
 
 #include <cstddef>
 
+namespace deleteNode{
+
 /**
  * Definition for singly-linked list.
  */
-struct ListNode {
-    int val;
-    ListNode *next;
+    struct ListNode {
+        int val;
+        ListNode *next;
 
-    ListNode(int x) : val(x), next(NULL) {}
-};
+        ListNode(int x) : val(x), next(NULL) {}
+    };
 
-class Solution {
-public:
-    ListNode *deleteNode(ListNode *head, int val) {
-        if(head == NULL) return head;
+    class Solution {
+    public:
+        ListNode *deleteNode(ListNode *head, int val) {
+            if(head == NULL) return head;
 
-        if (head->val == val)
-            return head->next;
+            if (head->val == val)
+                return head->next;
 
-        ListNode *pre = head;
-        while (pre->next != NULL) {
-            if (pre->next->val == val) {
-                pre->next = pre->next->next;
-                return head;
+            ListNode *pre = head;
+            while (pre->next != NULL) {
+                if (pre->next->val == val) {
+                    pre->next = pre->next->next;
+                    return head;
+                }
+                pre = pre->next;
             }
-            pre = pre->next;
-        }
 
-        return head;
-    }
-};
+            return head;
+        }
+    };
+}

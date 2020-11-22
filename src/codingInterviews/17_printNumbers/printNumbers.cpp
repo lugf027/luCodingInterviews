@@ -13,49 +13,53 @@
 
 using namespace std;
 
+namespace printNumbers{
+
 /**
  * 最基本的办法？竟然能通过，n 似乎很小的，没有考虑大数？
  */
-class Solution {
-public:
-    vector<int> printNumbers(int n) {
-        n = pow(10, n);
-        auto *res = new vector<int>();
-        for (int i = 1; i < n; ++i) {
-            res->push_back(i);
+    class Solution {
+    public:
+        vector<int> printNumbers(int n) {
+            n = pow(10, n);
+            auto *res = new vector<int>();
+            for (int i = 1; i < n; ++i) {
+                res->push_back(i);
+            }
+            return *res;
         }
-        return *res;
-    }
-};
+    };
 
 #include <string>
 
 /**
  * 大数版本
  */
-class Solution1{
-public:
-    void printNumbers(int n,int index,string& str,vector<int> &res) {
-        if (index == n) {
-            int num = atoi(str.c_str());
-            if (num != 0) res.push_back(num);
-            return;
+    class Solution1{
+    public:
+        void printNumbers(int n,int index,string& str,vector<int> &res) {
+            if (index == n) {
+                int num = atoi(str.c_str());
+                if (num != 0) res.push_back(num);
+                return;
+            }
+
+            for (int i = 0;i < 10;i++) {
+                // 每一位 从0到9依次排列
+                // eg: 0, 00, 000, 001, 002, 003,
+                str[index] = i + '0';
+                printNumbers(n, index+1, str, res);
+            }
         }
 
-        for (int i = 0;i < 10;i++) {
-            // 每一位 从0到9依次排列
-            // eg: 0, 00, 000, 001, 002, 003, 
-            str[index] = i + '0';
-            printNumbers(n, index+1, str, res);
+        vector<int> printNumbers(int n) {
+            vector<int> res;
+            string str;
+            str.resize(n);
+
+            printNumbers(n, 0, str, res);
+            return res;
         }
-    }
+    };
 
-    vector<int> printNumbers(int n) {
-        vector<int> res;
-        string str;
-        str.resize(n);
-
-        printNumbers(n, 0, str, res);
-        return res;
-    }
-};
+}

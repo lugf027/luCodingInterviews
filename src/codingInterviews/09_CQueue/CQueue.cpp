@@ -12,58 +12,67 @@
 
 using namespace std;
 
-class CQueue {
-public:
-    CQueue() {
+namespace CQueue {
 
-    }
+    class CQueue {
+    public:
+        CQueue() {
 
-    void appendTail(int value) {
-        in.push(value);
-    }
+        }
 
-    int deleteHead() {
-        if(out.empty()){
-            while ((int)in.size() > 0) {
-                out.push(in.top());
-                in.pop();
+        void appendTail(int value) {
+            in.push(value);
+        }
+
+        int deleteHead() {
+            if (out.empty()) {
+                while ((int) in.size() > 0) {
+                    out.push(in.top());
+                    in.pop();
+                }
+            }
+            if (out.empty()) {
+                return -1;
+            }
+            else {
+                int ret = out.top();
+                out.pop();
+                return ret;
             }
         }
-        if(out.empty()){
-            return -1;
-        }else{
-            int ret = out.top();
-            out.pop();
-            return ret;
-        }
-    }
 
-private:
-    stack<int> in;
-    stack<int> out;
-};
+    private:
+        stack<int> in;
+        stack<int> out;
+    };
 
 #include <iostream>
 
-int main() {
-    CQueue cQueue;
-    cQueue.appendTail(0);
-    cQueue.appendTail(1);
-    cQueue.appendTail(2);
-    cQueue.appendTail(3);
-    cQueue.appendTail(4);
-    cQueue.appendTail(5);
-    cQueue.appendTail(6);
+    class CQueueTest {
+    public:
+        static int test() {
+            CQueue cQueue;
+            cQueue.appendTail(0);
+            cQueue.appendTail(1);
+            cQueue.appendTail(2);
+            cQueue.appendTail(3);
+            cQueue.appendTail(4);
+            cQueue.appendTail(5);
+            cQueue.appendTail(6);
 
-    int a0 = cQueue.deleteHead();
-    int a1 = cQueue.deleteHead();
-    int a2 = cQueue.deleteHead();
-    int a3 = cQueue.deleteHead();
-    int a4 = cQueue.deleteHead();
-    int a5 = cQueue.deleteHead();
-    int a6 = cQueue.deleteHead();
+            int a0 = cQueue.deleteHead();
+            int a1 = cQueue.deleteHead();
+            int a2 = cQueue.deleteHead();
+            int a3 = cQueue.deleteHead();
+            int a4 = cQueue.deleteHead();
+            int a5 = cQueue.deleteHead();
+            int a6 = cQueue.deleteHead();
 
-    printf("%d,%d,%d,%d,%d,%d,%d", a0, a1, a2, a3, a4, a5, a6);
+            printf("%d,%d,%d,%d,%d,%d,%d", a0, a1, a2, a3, a4, a5, a6);
 
-    return 0;
+            return 0;
+        }
+    };
+
+
 }

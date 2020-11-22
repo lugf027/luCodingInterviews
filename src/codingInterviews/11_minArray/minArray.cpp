@@ -13,101 +13,110 @@
 #include <vector>
 
 using namespace std;
+namespace minArray {
 
-class Solution {
-public:
-    /**
-     * 遍历
-     * @param numbers
-     * @return
-     */
-    int minArray(vector<int> &numbers) {
-        if (numbers.empty())
+    class Solution {
+    public:
+        /**
+         * 遍历
+         * @param numbers
+         * @return
+         */
+        int minArray(vector<int> &numbers) {
+            if (numbers.empty())
+                return -1;
+
+            if (numbers.size() == 1)
+                return numbers.at(0);
+
+            for (int i = 0; i < numbers.size();) {
+                if (numbers.at(i) > numbers.at(++i))
+                    return numbers.at(i);
+            }
+
             return -1;
-
-        if (numbers.size() == 1)
-            return numbers.at(0);
-
-        for (int i = 0; i < numbers.size();) {
-            if (numbers.at(i) > numbers.at(++i))
-                return numbers.at(i);
         }
 
-        return -1;
-    }
+        /**
+         * 二分查找
+         * @param numbers
+         * @return
+         */
+        int minArray1(vector<int> &numbers) {
+            int left = 0;
+            int right = numbers.size() - 1;
 
-    /**
-     * 二分查找
-     * @param numbers
-     * @return
-     */
-    int minArray1(vector<int> &numbers) {
-        int left = 0;
-        int right = numbers.size()-1;
-
-        while (right - left > 1) {
-            int mid = (right + left) / 2;
-            if (numbers.at(right) > numbers.at(mid)) {
-                right = mid;
-            } else if (numbers.at(right) < numbers.at(mid)) {
-                left = mid;
-            } else {
-                --right;
-            }
-        }
-
-        return min(numbers.at(right), numbers.at(left));
-    }
-
-    /**
-     * 二分查找 beauty
-     * @param numbers
-     * @return
-     */
-    int minArray2(vector<int> &numbers) {
-        int left = 0;
-        int right = numbers.size()-1;
-
-        while (right > left) {
-            int mid = (right + left) / 2;
-            if (numbers.at(right) > numbers.at(mid)) {
-                right = mid;
-            } else if (numbers.at(right) < numbers.at(mid)) {
-                left = mid + 1;
-            } else {
-                --right;
-            }
-        }
-
-        return numbers.at(left);
-    }
-
-    /**
-     * 二分查找 + 线性查找 (我觉得不好？)
-     * @param numbers
-     * @return
-     */
-    int minArray3(vector<int> &numbers) {
-        int left = 0;
-        int right = numbers.size()-1;
-
-        while (right > left) {
-            int mid = (right + left) / 2;
-            if (numbers.at(right) > numbers.at(mid)) {
-                right = mid;
-            } else if (numbers.at(right) < numbers.at(mid)) {
-                left = mid + 1;
-            } else {
-                --left;
-                while(right > left){
-                    if(numbers.at(++left) < numbers.at(right)){
-                        return numbers.at(left);
-                    }
+            while (right - left > 1) {
+                int mid = (right + left) / 2;
+                if (numbers.at(right) > numbers.at(mid)) {
+                    right = mid;
                 }
-                return numbers.at(left);
+                else if (numbers.at(right) < numbers.at(mid)) {
+                    left = mid;
+                }
+                else {
+                    --right;
+                }
             }
+
+            return min(numbers.at(right), numbers.at(left));
         }
 
-        return numbers.at(left);
-    }
-};
+        /**
+         * 二分查找 beauty
+         * @param numbers
+         * @return
+         */
+        int minArray2(vector<int> &numbers) {
+            int left = 0;
+            int right = numbers.size() - 1;
+
+            while (right > left) {
+                int mid = (right + left) / 2;
+                if (numbers.at(right) > numbers.at(mid)) {
+                    right = mid;
+                }
+                else if (numbers.at(right) < numbers.at(mid)) {
+                    left = mid + 1;
+                }
+                else {
+                    --right;
+                }
+            }
+
+            return numbers.at(left);
+        }
+
+        /**
+         * 二分查找 + 线性查找 (我觉得不好？)
+         * @param numbers
+         * @return
+         */
+        int minArray3(vector<int> &numbers) {
+            int left = 0;
+            int right = numbers.size() - 1;
+
+            while (right > left) {
+                int mid = (right + left) / 2;
+                if (numbers.at(right) > numbers.at(mid)) {
+                    right = mid;
+                }
+                else if (numbers.at(right) < numbers.at(mid)) {
+                    left = mid + 1;
+                }
+                else {
+                    --left;
+                    while (right > left) {
+                        if (numbers.at(++left) < numbers.at(right)) {
+                            return numbers.at(left);
+                        }
+                    }
+                    return numbers.at(left);
+                }
+            }
+
+            return numbers.at(left);
+        }
+
+    };
+}
