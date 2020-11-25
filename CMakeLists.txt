@@ -7,6 +7,12 @@ file(GLOB SOURCES
         src/*/*/*.h
         src/*/*/*.cpp
         )
+
+file(GLOB SORT
+        src/sort/*.cpp
+        src/sort/*.h
+        )
+
 #
 add_executable(codingInterviews main.cpp ${SOURCE_FILES} ${SOURCES})
 
@@ -19,3 +25,5 @@ add_executable(10_2_numWays src/codingInterviews/10_2_numWays/numWays.cpp)
 #add_executable(17_printNumber src/codingInterviews/17_printNumbers/printNumbers.cpp)
 
 add_executable(20201106_sortByBits src/codingEveryday/20201106_sortByBits/sortByBits.cpp)
+
+add_executable(TEST_SORT src/sort/test.cpp ${SORT})
