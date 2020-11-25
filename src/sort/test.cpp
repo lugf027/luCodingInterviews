@@ -25,15 +25,19 @@ void arrPrint(int* arr, unsigned int n);
 
 int main(int argc, char* argv[]) {
 
-    testASort(&Sort::bubbleRecursive, "BubbleSort (Recursive)");
-    testASort(&Sort::bubbleIterative, "BubbleSort (Iterative)");
-    testASort(&Sort::bubbleRecursiveImprove, "BubbleSortImprove (Recursive)");
-    testASort(&Sort::bubbleIterativeImprove, "BubbleSortImprove (Iterative)");
+//    testASort(&Sort::bubbleRecursive, "BubbleSort (Recursive)");
+//    testASort(&Sort::bubbleIterative, "BubbleSort (Iterative)");
+//    testASort(&Sort::bubbleRecursiveImprove, "BubbleSortImprove (Recursive)");
+//    testASort(&Sort::bubbleIterativeImprove, "BubbleSortImprove (Iterative)");
+//
+//    testASort(&Sort::selectIterative, "SelectSort (Iterative)");
+//    testASort(&Sort::selectRecursive, "SelectSort (Recursive)");
+//    testASort(&Sort::selectIterativeImprove, "SelectSortImprove (Iterative)");
+//    testASort(&Sort::selectRecursiveImprove, "SelectSortImprove (Recursive)");
 
-    testASort(&Sort::selectIterative, "SelectSort (Iterative)");
-    testASort(&Sort::selectRecursive, "SelectSort (Recursive)");
-    testASort(&Sort::selectIterativeImprove, "SelectSortImprove (Iterative)");
-    testASort(&Sort::selectRecursiveImprove, "SelectSortImprove (Recursive)");
+    testASort(&Sort::insertSort, "InsertSort");
+    testASort(&Sort::shellSort, "ShellSort");
+
     return 0;
 }
 
@@ -46,7 +50,7 @@ inline void testASort(SortFunc sortFunc, const char* sortType) {
 //    unsigned int n = uniformIntDistribution(randomEngine) % 20 + 1;
 
 //    unsigned int n = rand() % 20 + 1;
-    unsigned int n = 5;
+    unsigned int n = 15;
     static int* arr = nullptr;
 
     printf("\033[;36m%s\033[0m\n", sortType);

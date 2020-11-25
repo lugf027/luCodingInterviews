@@ -112,4 +112,51 @@ void Sort::selectRecursiveImprove(int* arr, unsigned int n) {
     selectRecursiveImprove(arr + 1, n - 2);
 }
 
+void Sort::insertSort(int* arr, unsigned int n) {
+    if (n < 2) return;
+    for (int i = 1; i < n; ++i) {
+        int tmp = arr[i];
+        int j = i - 1;
+        for (; j >= 0; --j) {
+            if (arr[j] <= tmp) break;
+            arr[j + 1] = arr[j];
+        }
+        arr[j + 1] = tmp;
+    }
+}
+
+void Sort::shellSort(int* arr, unsigned int n) {
+    for (int i = n / 2; i > 0; i = i / 2) {
+        // i can't be unsigned here for UNSIGNED_INT_MAX may be appear
+        shellSortAux(arr, n, i);
+    }
+    shellSortAux(arr, n, 0);
+}
+
+/**
+ * 希尔排序辅助函数，给各个组排序
+ * @param  arr 待排序数组（整体）
+ * @param    n 数组长度
+ * @param step 分组间隔
+ */
+void Sort::shellSortAux(int* arr, unsigned int n, int step) {
+    for ( int groupI = 0; groupI < step; ++groupI) {
+        for ( int groupInnerI = groupI + step; groupInnerI < n; groupInnerI += step) {
+            int tmp = arr[groupInnerI];
+            int groupPreI = groupInnerI - step;
+            for(;groupPreI >= 0; groupPreI -= step){
+                if(arr[groupPreI] < tmp) break;
+                arr[groupPreI+step] = arr[groupPreI];
+            }
+            arr[groupPreI + step] = tmp;
+        }
+    }
+    std::cout.width(7);
+    std::cout<<step<<": ";
+    for (int printI = 0; printI < n; ++printI) {
+        printf("%d ", arr[printI]);
+    }
+    printf("\n");
+}
+
 
