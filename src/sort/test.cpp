@@ -14,8 +14,12 @@
 /// the sortFunc's pointer
 typedef void (* SortFunc)(int*, unsigned int);
 
+typedef void (* SortFunc_intLen)(int*, int);
+
 /// test a Sort Function
 inline void testASort(SortFunc sortFunc, const char* sortType);
+
+inline void testASort(SortFunc_intLen sortFunc, const char* sortType);
 
 /// malloc & gen IntArr
 int* arrGen(int* arr, unsigned int n);
@@ -35,9 +39,13 @@ int main(int argc, char* argv[]) {
 //    testASort(&Sort::selectIterativeImprove, "SelectSortImprove (Iterative)");
 //    testASort(&Sort::selectRecursiveImprove, "SelectSortImprove (Recursive)");
 
-    testASort(&Sort::insertSort, "InsertSort");
-    testASort(&Sort::shellSort, "ShellSort");
+//    testASort(&Sort::insertSort, "InsertSort");
+//    testASort(&Sort::shellSort, "ShellSort");
 
+    testASort(&Sort::quickSort, "QuickSort");
+
+    testASort(&Sort::mergeSortRecursive, "mergeSortRecursive");
+    testASort(&Sort::mergeSortIterative, "mergeSortIterative");
     return 0;
 }
 
@@ -50,6 +58,16 @@ inline void testASort(SortFunc sortFunc, const char* sortType) {
 //    unsigned int n = uniformIntDistribution(randomEngine) % 20 + 1;
 
 //    unsigned int n = rand() % 20 + 1;
+    unsigned int n = 15;
+    static int* arr = nullptr;
+
+    printf("\033[;36m%s\033[0m\n", sortType);
+    arr = arrGen(arr, n);
+    sortFunc(arr, n);
+    arrPrint(arr, n);
+}
+
+inline void testASort(SortFunc_intLen sortFunc, const char* sortType) {
     unsigned int n = 15;
     static int* arr = nullptr;
 

@@ -43,6 +43,21 @@ public:
     // 希尔增量是希尔排序中希尔给出的增量序列 ht = N / 2, h[k+1] = h[k] / 2，即{N/2, (N / 2)/2, ..., 1}
     static void shellSort(int* arr, unsigned int n);
 
+    /// 快速排序：挖坑填数 + 分治
+    //   1、从数列中选择一个数作为基准数；
+    //   2、扫描数列，小于基准数之元素放置其左侧，其余的放置其右侧，得到左右侧两个区间；
+    //   3、对左右两侧区间元素重复做第二步，直至各个区间元素少于二个。
+    // 快排优化策略
+    //   1、采用更合理的基准数（中心轴），减少递归深度。如：从数列中选取多个数，取中间数；
+    //   2、结合插入排序，区间在十个元素之内采用插入排序，效率更高。
+    static void quickSort(int* arr, int n);
+
+    /// 归并排序
+    static void mergeSortIterative(int* arr, int n);
+
+    static void mergeSortRecursive(int* arr, int n);
+
+
 
 private:
     inline static void swapInt(int &num1, int &num2) {
@@ -52,6 +67,8 @@ private:
     }
 
     static void shellSortAux(int* arr, unsigned int n, int step);
+
+    static void mergeSortRecursiveAux(int* arr, int* arrTmp, int start, int end);
 
 };
 
