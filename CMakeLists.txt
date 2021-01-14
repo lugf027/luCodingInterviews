@@ -13,8 +13,13 @@ file(GLOB SORT
         src/sort/*.h
         )
 
+file (GLOB TRAIN
+        src/*/*.h
+        src/*/*.cpp
+        )
+
 #
-add_executable(codingInterviews main.cpp ${SOURCE_FILES} ${SOURCES})
+add_executable(codingInterviews main.cpp ${SOURCE_FILES} ${SOURCES} ${TRAIN})
 
 #add_executable(codingInterviews main.cpp src/codingInterviews/01_AssignmentOperator/AssignmentOperator.h src/codingInterviews/01_AssignmentOperator/AssignmentOperator.cpp)
 add_executable(05_replaceSpace src/codingInterviews/05_replaceSpace/replaceSpace.cpp src/codingEveryday/20201013_swapPairs/swapPairs.cpp)
