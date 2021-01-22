@@ -6,6 +6,7 @@ set(CMAKE_CXX_STANDARD 11)
 file(GLOB SOURCES
         src/*/*/*.h
         src/*/*/*.cpp
+        src/*/*/*.c
         )
 
 file(GLOB SORT
@@ -32,3 +33,10 @@ add_executable(10_2_numWays src/codingInterviews/10_2_numWays/numWays.cpp)
 add_executable(20201106_sortByBits src/codingEveryday/20201106_sortByBits/sortByBits.cpp)
 
 add_executable(TEST_SORT src/sort/test.cpp ${SORT})
+
+add_executable(AG_01_HANOI src/algorithmGossip/01_towerOfHanoi.cpp)
+add_executable(AG_02_fib src/algorithmGossip/02_fibonacci.cpp)
+add_executable(AG_03_yanghui src/algorithmGossip/03_yanghui_pascal.cpp)
+add_executable(AG_05_maze src/algorithmGossip/05_maze.cpp)
+add_executable(AG_06_maze src/algorithmGossip/06_mazeAll.cpp)
+add_executable(AG_07_knight src/algorithmGossip/07_knightTour.cpp)
