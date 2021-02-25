@@ -79,13 +79,13 @@ public:
         sort(nums2.begin(), nums2.end());
         int length1 = nums1.size(), length2 = nums2.size();
         int index1 = 0, index2 = 0;
-        vector<int> intersection;
+        vector<int> res;
         while (index1 < length1 && index2 < length2) {
             int num1 = nums1[index1], num2 = nums2[index2];
             if (num1 == num2) {
                 // 保证加入元素的唯一性
-                if (!intersection.size() || num1 != intersection.back()) {
-                    intersection.push_back(num1);
+                if (res.empty() || num1 != res.back()) {
+                    res.push_back(num1);
                 }
                 index1++;
                 index2++;
@@ -95,6 +95,6 @@ public:
                 index2++;
             }
         }
-        return intersection;
+        return res;
     }
 };
