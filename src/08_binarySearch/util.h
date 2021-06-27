@@ -1,21 +1,14 @@
 /*************************************************************
  * Name     : util
  * Title    : 
- * Author   : lugf027 17:07 2021/1/20.
+ * Author   : lugf027 11:00 2021/3/13.
  * Describe : 
  *************************************************************/
 
 #ifndef CODINGINTERVIEWS_UTIL_H
 #define CODINGINTERVIEWS_UTIL_H
 
-#include <string>
 #include <vector>
-#include <cmath>
-#include <algorithm>
-#include <deque>
-#include <stack>
-
-#include <unordered_set>
 
 using namespace std;
 
